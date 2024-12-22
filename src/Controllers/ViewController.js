@@ -1,15 +1,10 @@
 import Enums from "../Config/Enums.js";
-import sendEmail from "../Helpers/NodeMailer.js";
-import CategoryService from "../Services/CategoryService.js";
-import CompanyService from "../Services/CompanyService.js";
-import JobDataService from "../Services/JobDataService.js";
-import VisitorService from "../Services/VisitorService.js";
 
 const ViewController = {
     home: async (req, res) => {
         const view = {
             title: 'Ana Səhifə',
-            body: "Home/NewHome.ejs",
+            body: "",
             // body: "Home/Index.ejs",
             js: "Home.js"
         };
@@ -74,27 +69,27 @@ const ViewController = {
     },
 
 
-    education: (req, res) => {
-        const educationData = Enums.Education;
+    // education: (req, res) => {
+    //     const educationData = Enums.Education;
 
-        res.status(200).json(educationData);
-    },
-    experience: (req, res) => {
-        const experience = Enums.Experience;
-        res.status(200).json(experience);
-    },
-    sendMail: async (req, res) => {
-        const response = await sendEmail(req.body.data);
-        res.status(200).json({ status: response.status, message: response.message });
+    //     res.status(200).json(educationData);
+    // },
+    // experience: (req, res) => {
+    //     const experience = Enums.Experience;
+    //     res.status(200).json(experience);
+    // },
+    // sendMail: async (req, res) => {
+    //     const response = await sendEmail(req.body.data);
+    //     res.status(200).json({ status: response.status, message: response.message });
 
-    },
-    statistics: async (req, res) => {
-        const company = await CompanyService.count()
-        const vacancy = await JobDataService.count()
-        const visitor = await VisitorService.count()
-        res.status(200).json({ status: 200, message:"",data:{company,vacancy,visitor} });
+    // },
+    // statistics: async (req, res) => {
+    //     const company = await CompanyService.count()
+    //     const vacancy = await JobDataService.count()
+    //     const visitor = await VisitorService.count()
+    //     res.status(200).json({ status: 200, message:"",data:{company,vacancy,visitor} });
     
-    }
+    // }
 };
 
 export default ViewController;
