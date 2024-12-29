@@ -7,6 +7,7 @@ const router = express.Router();
 
 //Load Views
 router.get('/', viewController.home);
+router.get('/shop', viewController.shopList);
 // router.get('/auth', viewController.auth);
 // router.get('/jobs',visitorLogger, viewController.jobs);
 // router.get('/about-us',visitorLogger, viewController.aboutUs);

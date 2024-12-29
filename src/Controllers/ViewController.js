@@ -6,7 +6,7 @@ const ViewController = {
             title: 'Ana Səhifə',
             // body: "",
             body: "Home/Index.ejs",
-            js: "Home.js"
+            js: null
         };
         res.render('Main', view);
     },
@@ -18,11 +18,11 @@ const ViewController = {
         };
         res.render('Main', view);
     },
-    jobs: async (req, res) => {
+    shopList: async (req, res) => {
         const view = {
-            title: 'Vakansiyalar',
-            body: "Jobs/Index.ejs",
-            js: "Jobs.js"
+            title: 'Shop',
+            body: "Shop/List.ejs",
+            js: null
         };
         res.render('Main', view);
     },
