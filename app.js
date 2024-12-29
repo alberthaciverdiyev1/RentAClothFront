@@ -2,7 +2,6 @@ import express from 'express';
 import path from 'path';
 import cron from 'node-cron';
 import routes from './src/Routes/Main.js';
-import sequelize from './src/Config/Database.js';
 import loggerMiddleware from './src/Middlewares/Logger.js';
 import i18n from 'i18n';
 import cookieParser from 'cookie-parser';
