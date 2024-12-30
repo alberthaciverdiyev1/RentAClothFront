@@ -10,8 +10,8 @@ router.get('/', viewController.home);
 router.get('/shop', viewController.shopList);
 // router.get('/auth', viewController.auth);
 // router.get('/jobs',visitorLogger, viewController.jobs);
-// router.get('/about-us',visitorLogger, viewController.aboutUs);
-// router.get('/contact',visitorLogger, viewController.contactUs);
+router.get('/about-us', viewController.aboutUs);
+router.get('/contact-us', viewController.contactUs);
 // router.get('/add-job',visitorLogger, viewController.addJob);
 // router.get('/statistics',viewController.statistics)
 // //Enums
