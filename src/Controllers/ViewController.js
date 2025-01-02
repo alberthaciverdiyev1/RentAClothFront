@@ -4,17 +4,24 @@ const ViewController = {
     home: async (req, res) => {
         const view = {
             title: 'Ana Səhifə',
-            // body: "",
             body: "Home/Index.ejs",
             js: null
         };
         res.render('Main', view);
     },
-    auth: async (req, res) => {
+    login: async (req, res) => {
         const view = {
-            title: 'Auth',
-            body: "Auth/Index.ejs",
-            js: "Auth.js"
+            title: 'Ana Səhifə',
+            body: "Auth/Login.ejs",
+            js: null
+        };
+        res.render('Main', view);
+    },
+    register: async (req, res) => {
+        const view = {
+            title: 'Ana Səhifə',
+            body: "Auth/Register.ejs",
+            js: null
         };
         res.render('Main', view);
     },

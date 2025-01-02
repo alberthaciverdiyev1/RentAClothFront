@@ -8,7 +8,8 @@ const router = express.Router();
 //Load Views
 router.get('/', viewController.home);
 router.get('/shop', viewController.shopList);
-// router.get('/auth', viewController.auth);
+router.get('/login', viewController.login);
+router.get('/register', viewController.register);
 // router.get('/jobs',visitorLogger, viewController.jobs);
 router.get('/about-us', viewController.aboutUs);
 router.get('/contact-us', viewController.contactUs);
